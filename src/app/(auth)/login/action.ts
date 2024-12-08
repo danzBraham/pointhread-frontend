@@ -43,5 +43,5 @@ export async function loginAction(_prevState: unknown, formData: FormData) {
     };
   }
 
-  redirect("/");
+  redirect("/dashboard");
 }
