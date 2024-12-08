@@ -9,7 +9,7 @@ export default function Page() {
 
       <section className="w-full max-w-md space-y-6 p-6">
         <div>
-          <h3 className="text-3xl font-medium">Log In</h3>
+          <h3 className="text-3xl font-medium">Login</h3>
           <p className="">Hello, welcome back 👋</p>
         </div>
 

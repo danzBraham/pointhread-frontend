@@ -28,7 +28,7 @@ export const LoginForm = () => {
         defaultValue={state?.formData?.password}
       />
       <Button disabled={isPending} className="w-full">
-        {isPending ? "Log In..." : "Log In"}
+        {isPending ? "Login..." : "Login"}
       </Button>
       {state?.message && <p className="text-rose-500">{state?.message}</p>}
     </form>
