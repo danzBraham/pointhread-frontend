@@ -4,7 +4,7 @@ import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import * as v from "valibot";
 
-import { api } from "@/app/utils/http-client";
+import { api } from "@/utils/http-client";
 
 import { ApiResponseSchema, RegisterSchema } from "../register/schema";
 
