@@ -1,12 +1,11 @@
 import { GoogleLoginForm } from "@/_components/form/google-login-form";
 import { RegisterForm } from "@/_components/form/register-form";
+import { Brand } from "@/_components/ui/brand";
 
 export default function Page() {
   return (
     <main className="flex min-h-screen items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100">
-      <h1 className="fixed left-6 top-6 text-3xl font-bold tracking-tight md:left-8 md:top-8 md:text-4xl">
-        Poin<span className="text-rose-500">thread</span>
-      </h1>
+      <Brand />
 
       <section className="w-full max-w-md space-y-6 p-6">
         <div>

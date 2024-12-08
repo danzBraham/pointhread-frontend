@@ -8,7 +8,7 @@ import { api } from "@/app/utils/http-client";
 
 import { ApiResponseSchema, RegisterSchema } from "../register/schema";
 
-export interface IState {
+export interface RegisterState {
   message: string | null;
   formData: {
     username: string;
@@ -18,7 +18,7 @@ export interface IState {
   resetKey: number;
 }
 
-export async function register(_prevState: unknown, formData: FormData) {
+export async function registerAction(_prevState: unknown, formData: FormData) {
   const formValues = Object.fromEntries(formData);
 
   try {
@@ -30,7 +30,7 @@ export async function register(_prevState: unknown, formData: FormData) {
     if (!res.success) {
       return {
         message: res.message,
-        formData: formValues as IState["formData"],
+        formData: formValues as RegisterState["formData"],
         resetKey: 0,
       };
     }
@@ -39,10 +39,10 @@ export async function register(_prevState: unknown, formData: FormData) {
   } catch (error: unknown) {
     return {
       message: error instanceof Error ? error.message : "Something went wrong with registration",
-      formData: formValues as IState["formData"],
+      formData: formValues as RegisterState["formData"],
       resetKey: 0,
     };
   }
 
-  redirect("/");
+  redirect("/dashboard");
 }

@@ -4,9 +4,9 @@ import { useActionState } from "react";
 
 import { Button } from "@/_components/ui/button";
 import { Input } from "@/_components/ui/input";
-import { IState, register } from "@/app/(auth)/register/action";
+import { registerAction, RegisterState } from "@/app/(auth)/register/action";
 
-const initialState: IState = {
+const initialState: RegisterState = {
   message: null,
   formData: {
     username: "",
@@ -17,7 +17,7 @@ const initialState: IState = {
 };
 
 export const RegisterForm = () => {
-  const [state, formAction, isPending] = useActionState(register, initialState);
+  const [state, formAction, isPending] = useActionState(registerAction, initialState);
 
   return (
     <form action={formAction} key={state?.resetKey} autoComplete="off" className="space-y-2">
