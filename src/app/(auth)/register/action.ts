@@ -1,9 +1,11 @@
 "use server";
 
-import { api } from "@/app/utils/http-client";
-import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
 import * as v from "valibot";
+
+import { api } from "@/app/utils/http-client";
+
 import { ApiResponseSchema, RegisterSchema } from "./schema";
 
 export interface IState {
