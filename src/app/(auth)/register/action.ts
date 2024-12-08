@@ -18,7 +18,7 @@ export interface IState {
   resetKey: number;
 }
 
-export async function register(prevState: IState, formData: FormData) {
+export async function register(_prevState: unknown, formData: FormData) {
   const formValues = Object.fromEntries(formData);
 
   try {
@@ -31,7 +31,7 @@ export async function register(prevState: IState, formData: FormData) {
       return {
         message: res.message,
         formData: formValues as IState["formData"],
-        resetKey: prevState.resetKey,
+        resetKey: 0,
       };
     }
 
@@ -40,7 +40,7 @@ export async function register(prevState: IState, formData: FormData) {
     return {
       message: error instanceof Error ? error.message : "Something went wrong with registration",
       formData: formValues as IState["formData"],
-      resetKey: prevState.resetKey,
+      resetKey: 0,
     };
   }
 

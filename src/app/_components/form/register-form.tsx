@@ -37,7 +37,7 @@ export const RegisterForm = () => {
       <Button disabled={isPending} className="w-full">
         {isPending ? "Registering..." : "Register"}
       </Button>
-      {state?.message && <p className="text-red-500">{state?.message}</p>}
+      {state?.message && <p className="text-rose-500">{state?.message}</p>}
     </form>
   );
 };
