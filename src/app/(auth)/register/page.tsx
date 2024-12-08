@@ -1,5 +1,5 @@
-import { GoogleLoginForm } from "@/app/_components/form/google-login-form";
-import { RegisterForm } from "@/app/_components/form/register-form";
+import { GoogleLoginForm } from "@/_components/form/google-login-form";
+import { RegisterForm } from "@/_components/form/register-form";
 
 export default function Page() {
   return (

@@ -6,7 +6,7 @@ import * as v from "valibot";
 
 import { api } from "@/app/utils/http-client";
 
-import { ApiResponseSchema, RegisterSchema } from "./schema";
+import { ApiResponseSchema, RegisterSchema } from "../register/schema";
 
 export interface IState {
   message: string | null;

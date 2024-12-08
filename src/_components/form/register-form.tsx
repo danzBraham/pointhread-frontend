@@ -2,8 +2,8 @@
 
 import { useActionState } from "react";
 
-import { Button } from "@/app/_components/ui/button";
-import { Input } from "@/app/_components/ui/input";
+import { Button } from "@/_components/ui/button";
+import { Input } from "@/_components/ui/input";
 import { IState, register } from "@/app/(auth)/register/action";
 
 const initialState: IState = {
